@@ -1,0 +1,25 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.WindowsDesktop">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <UseWPF>true</UseWPF>
+    <Platforms>AnyCPU;x86</Platforms>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="images\GreenCheck.png" />
+    <None Remove="images\lefttwo.png" />
+    <None Remove="images\RedMark.png" />
+    <None Remove="images\right.png" />
+    <None Remove="images\XMark.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="images\GreenCheck.png" />
+    <Resource Include="images\lefttwo.png" />
+    <Resource Include="images\RedMark.png" />
+    <Resource Include="images\right.png" />
+  </ItemGroup>
+
+</Project>

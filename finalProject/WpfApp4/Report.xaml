@@ -1,0 +1,85 @@
+﻿<Window x:Class="PersonalAgenda.ReportWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp4"
+        mc:Ignorable="d"
+        Title="Monthly Report" Height="850" Width="750">
+    <!-- Main Grid-->
+    <Grid Height="700" Width="650">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="34*"/>
+            <ColumnDefinition Width="73*"/>
+            <ColumnDefinition Width="18*"/>
+        </Grid.ColumnDefinitions>
+
+
+        <Grid Grid.ColumnSpan="3">
+            <Grid.Resources>
+                <SolidColorBrush x:Key="brush" Color="black"></SolidColorBrush>
+            </Grid.Resources>
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+
+            <Border Grid.Column="0" Grid.Row="0"  BorderBrush="{StaticResource brush}" BorderThickness= "3 3 3 3" CornerRadius="16 16 0 0" ></Border>
+
+        </Grid>
+
+
+        <!-- Content Grid-->
+        <Grid Grid.ColumnSpan="3">
+            <ListView Margin="3,50,3,5"
+                x:Name="lvTasksInMonth">
+                <ListView.View >
+                    <GridView>
+
+                        <GridViewColumn Header="Task Title" Width="150" DisplayMemberBinding="{Binding Title}"/>
+                        <GridViewColumn Header="Due Date" Width="150" DisplayMemberBinding="{Binding DueDate}"/>
+                        <GridViewColumn Header="Completed" Width="100" DisplayMemberBinding="{Binding IsCompleted}"/>
+                        <GridViewColumn Header="Overdue" Width="100" DisplayMemberBinding="{Binding IsOverDue}"/>
+
+                    </GridView>
+                </ListView.View>
+            </ListView>
+
+
+        </Grid>
+
+
+
+        <!-- Title Grid-->
+        <Grid Grid.ColumnSpan="3">
+            <Grid.Resources>
+                <SolidColorBrush x:Key="brush" Color="black"></SolidColorBrush>
+            </Grid.Resources>
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+
+            </Grid.ColumnDefinitions>
+
+            <Grid.RowDefinitions>
+                <RowDefinition Height="50"/>
+
+            </Grid.RowDefinitions>
+
+            <Border BorderThickness="3" BorderBrush="Black">
+                <TextBlock TextAlignment="Center" FontSize="30" FontWeight="Bold" Background="PaleGoldenrod" TextDecorations="Baseline" FontFamily="JasmineUPC" x:Name="txbReportTitle"></TextBlock>
+            </Border>
+
+
+
+        </Grid>
+
+
+       
+
+    </Grid>
+</Window>

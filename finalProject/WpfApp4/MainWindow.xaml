@@ -1,0 +1,260 @@
+﻿<Window x:Class="PersonalAgenda.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp4"
+        mc:Ignorable="d"
+        Title="Agenda" Height="900" Width="1200">
+    <!-- Main Grid-->
+    <Grid Height="900" Width="1200">
+
+
+
+        <!-- TaskBox-->
+        <Grid >
+            <Grid.Resources>
+                <SolidColorBrush x:Key="brush" Color="black"></SolidColorBrush>
+            </Grid.Resources>
+
+            <Grid Margin="20,80,952,0" >
+
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="228" />
+
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions >
+                    <RowDefinition Height="700" />
+
+
+                </Grid.RowDefinitions>
+                <Border Grid.Column="0" Grid.Row="0"  BorderBrush="{StaticResource brush}" BorderThickness= "3 3 3 3" CornerRadius="0 0 16 16"></Border>
+                <ScrollViewer HorizontalScrollBarVisibility="Auto" Margin="0,4,10,31">
+                    <TextBlock TextWrapping="Wrap"
+                TextAlignment="left"
+                 MaxWidth="200"
+                x:Name="txbTaskSummary" FontSize="16" Width="202" Height="684"
+               ></TextBlock>
+                </ScrollViewer>
+
+
+            </Grid>
+
+            <!-- Calendar Title grid-->
+            <Grid Margin="212,21,111,394" Background="NavajoWhite" Width="700">
+
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="700" />
+
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions >
+                    <RowDefinition Height="100"/>
+
+
+                </Grid.RowDefinitions>
+                <Border Grid.Column="0" Grid.Row="0"  BorderBrush="{StaticResource brush}" BorderThickness= "3 3 3 3"></Border>
+
+                <TextBlock x:Name="txbDate" Grid.Row="0" FontSize="50" TextAlignment="Center" FontFamily="Times new roman" Margin="0,0,10,0"> Test 2022</TextBlock>
+                <TextBlock Grid.Row="0" FontSize="15" TextAlignment="Center" FontFamily="Times new roman" Margin="-600,75,0,0"> SUNDAY</TextBlock>
+                <TextBlock Grid.Row="0" FontSize="15" TextAlignment="Center" FontFamily="Times new roman" Margin="-400,75,0,0"> MONDAY</TextBlock>
+                <TextBlock Grid.Row="0" FontSize="15" TextAlignment="Center" FontFamily="Times new roman" Margin="-200,75,0,0"> TUESDAY</TextBlock>
+                <TextBlock Grid.Row="0" FontSize="15" TextAlignment="Center" FontFamily="Times new roman" Margin="0,75,0,0"> WEDNESDAY</TextBlock>
+                <TextBlock Grid.Row="0" FontSize="15" TextAlignment="Center" FontFamily="Times new roman" Margin="200,75,0,0"> THURSDAY</TextBlock>
+                <TextBlock Grid.Row="0" FontSize="15" TextAlignment="Center" FontFamily="Times new roman" Margin="400,75,0,0"> FRIDAY</TextBlock>
+                <TextBlock Grid.Row="0" FontSize="15" TextAlignment="Center" FontFamily="Times new roman" Margin="600,75,0,0"> SATURDAY</TextBlock>
+            </Grid>
+            <!-- Calendar Content-->
+            <Grid Margin="300.4,120,0,0" x:Name="calendar">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="100"/>
+                    <ColumnDefinition Width="100" />
+                    <ColumnDefinition Width="100" />
+                    <ColumnDefinition Width="100" />
+                    <ColumnDefinition Width="100" />
+                    <ColumnDefinition Width="100" />
+                    <ColumnDefinition Width="100" />
+                    <ColumnDefinition Width="100"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions >
+                    <RowDefinition Height="90"/>
+                    <RowDefinition Height="90"/>
+                    <RowDefinition Height="90"/>
+                    <RowDefinition Height="100"/>
+                    <RowDefinition Height="90"/>
+                    <RowDefinition Height="90"/>
+                    <RowDefinition Height="90"/>
+
+                </Grid.RowDefinitions>
+
+
+                <Button Grid.Column="0" Grid.Row="0" x:Name="ONE" Click="btnShowMoreInfo_Click" MouseDoubleClick="btnUpdateInfo_DoubleClick"></Button>
+                <Button Grid.Column="1" Grid.Row="0" x:Name="TWO" Click="btnShowMoreInfo_Click" MouseDoubleClick="btnUpdateInfo_DoubleClick"></Button>
+                <Button Grid.Column="2" Grid.Row="0" x:Name="THREE" Click="btnShowMoreInfo_Click" MouseDoubleClick="btnUpdateInfo_DoubleClick"></Button>
+                <Button Grid.Column="3" Grid.Row="0" x:Name="FOUR" Click="btnShowMoreInfo_Click" MouseDoubleClick="btnUpdateInfo_DoubleClick"></Button>
+                <Button Grid.Column="4" Grid.Row="0" x:Name="FIVE" Click="btnShowMoreInfo_Click" MouseDoubleClick="btnUpdateInfo_DoubleClick"></Button>
+                <Button Grid.Column="5" Grid.Row="0" x:Name="SIX" Click="btnShowMoreInfo_Click" MouseDoubleClick="btnUpdateInfo_DoubleClick"></Button>
+                <Button Grid.Column="6" Grid.Row="0" x:Name="SEVEN" Click="btnShowMoreInfo_Click" MouseDoubleClick="btnUpdateInfo_DoubleClick"></Button>
+                <Button Background="LightGray" Grid.Column="0" Grid.Row="1" x:Name="EIGHT" Click="btnShowMoreInfo_Click" MouseDoubleClick="btnUpdateInfo_DoubleClick"></Button>
+                <Button Background="LightGray" Grid.Column="1" Grid.Row="1" x:Name="NINE" Click="btnShowMoreInfo_Click" MouseDoubleClick="btnUpdateInfo_DoubleClick"></Button>
+                <Button Background="LightGray" Grid.Column="2" Grid.Row="1" x:Name="TEN" Click="btnShowMoreInfo_Click" MouseDoubleClick="btnUpdateInfo_DoubleClick"></Button>
+                <Button Background="LightGray" Grid.Column="3" Grid.Row="1" x:Name="ELEVEN" Click="btnShowMoreInfo_Click" MouseDoubleClick="btnUpdateInfo_DoubleClick"></Button>
+                <Button Background="LightGray" Grid.Column="4" Grid.Row="1" x:Name="TWELVE" Click="btnShowMoreInfo_Click" MouseDoubleClick="btnUpdateInfo_DoubleClick"></Button>
+                <Button Background="LightGray" Grid.Column="5" Grid.Row="1" x:Name="THIRTEEN" Click="btnShowMoreInfo_Click" MouseDoubleClick="btnUpdateInfo_DoubleClick"></Button>
+                <Button Background="LightGray" Grid.Column="6" Grid.Row="1" x:Name="FOURTEEN" Click="btnShowMoreInfo_Click" MouseDoubleClick="btnUpdateInfo_DoubleClick"></Button>
+                <Button Grid.Column="0" Grid.Row="2" x:Name="FIFTEEN" Click="btnShowMoreInfo_Click" MouseDoubleClick="btnUpdateInfo_DoubleClick"></Button>
+                <Button Grid.Column="1" Grid.Row="2" x:Name="SIXTEEN" Click="btnShowMoreInfo_Click" MouseDoubleClick="btnUpdateInfo_DoubleClick"></Button>
+                <Button Grid.Column="2" Grid.Row="2" x:Name="SEVENTEEN" Click="btnShowMoreInfo_Click" MouseDoubleClick="btnUpdateInfo_DoubleClick"></Button>
+                <Button Grid.Column="3" Grid.Row="2" x:Name="EIGHTEEN" Click="btnShowMoreInfo_Click" MouseDoubleClick="btnUpdateInfo_DoubleClick"></Button>
+                <Button Grid.Column="4" Grid.Row="2" x:Name="NINETEEN" Click="btnShowMoreInfo_Click" MouseDoubleClick="btnUpdateInfo_DoubleClick"></Button>
+                <Button Grid.Column="5" Grid.Row="2" x:Name="TWENTY" Click="btnShowMoreInfo_Click" MouseDoubleClick="btnUpdateInfo_DoubleClick"></Button>
+                <Button Grid.Column="6" Grid.Row="2" x:Name="TWENTY_ONE" Click="btnShowMoreInfo_Click" MouseDoubleClick="btnUpdateInfo_DoubleClick"></Button>
+                <Button Background="LightGray" Grid.Column="0" Grid.Row="3" x:Name="TWENTY_TWO" Click="btnShowMoreInfo_Click" MouseDoubleClick="btnUpdateInfo_DoubleClick"></Button>
+                <Button Background="LightGray" Grid.Column="1" Grid.Row="3" x:Name="TWENTY_THREE" Click="btnShowMoreInfo_Click" MouseDoubleClick="btnUpdateInfo_DoubleClick"></Button>
+                <Button Background="LightGray" Grid.Column="2" Grid.Row="3" x:Name="TWENTY_FOUR" Click="btnShowMoreInfo_Click" MouseDoubleClick="btnUpdateInfo_DoubleClick"></Button>
+                <Button Background="LightGray" Grid.Column="3" Grid.Row="3" x:Name="TWENTY_FIVE" Click="btnShowMoreInfo_Click" MouseDoubleClick="btnUpdateInfo_DoubleClick"></Button>
+                <Button Background="LightGray" Grid.Column="4" Grid.Row="3" x:Name="TWENTY_SIX" Click="btnShowMoreInfo_Click" MouseDoubleClick="btnUpdateInfo_DoubleClick"></Button>
+                <Button Background="LightGray" Grid.Column="5" Grid.Row="3" x:Name="TWENTY_SEVEN" Click="btnShowMoreInfo_Click" MouseDoubleClick="btnUpdateInfo_DoubleClick"></Button>
+                <Button Background="LightGray" Grid.Column="6" Grid.Row="3" x:Name="TWENTY_EIGHT" Click="btnShowMoreInfo_Click" MouseDoubleClick="btnUpdateInfo_DoubleClick"></Button>
+                <Button Grid.Column="0" Grid.Row="4" x:Name="TWENTY_NINE" Click="btnShowMoreInfo_Click" MouseDoubleClick="btnUpdateInfo_DoubleClick"></Button>
+                <Button Grid.Column="1" Grid.Row="4" x:Name="THIRTY" Click="btnShowMoreInfo_Click" MouseDoubleClick="btnUpdateInfo_DoubleClick"></Button>
+                <Button Grid.Column="2" Grid.Row="4" x:Name="THIRTY_ONE" Click="btnShowMoreInfo_Click" MouseDoubleClick="btnUpdateInfo_DoubleClick"></Button>
+                <Button Grid.Column="3" Grid.Row="4" x:Name="THIRTY_TWO" Click="btnShowMoreInfo_Click" MouseDoubleClick="btnUpdateInfo_DoubleClick"></Button>
+                <Button Grid.Column="4" Grid.Row="4" x:Name="THIRTY_THREE" Click="btnShowMoreInfo_Click" MouseDoubleClick="btnUpdateInfo_DoubleClick"></Button>
+                <Button Grid.Column="5" Grid.Row="4" x:Name="THIRTY_FOUR" Click="btnShowMoreInfo_Click" MouseDoubleClick="btnUpdateInfo_DoubleClick"></Button>
+                <Button Grid.Column="6" Grid.Row="4" x:Name="THIRTY_FIVE" Click="btnShowMoreInfo_Click" MouseDoubleClick="btnUpdateInfo_DoubleClick"></Button>
+                <Button Background="LightGray" Grid.Column="0" Grid.Row="5" x:Name="THIRTY_SIX" Click="btnShowMoreInfo_Click" MouseDoubleClick="btnUpdateInfo_DoubleClick"></Button>
+                <Button Background="LightGray" Grid.Column="1" Grid.Row="5" x:Name="THIRTY_SEVEN" Click="btnShowMoreInfo_Click" MouseDoubleClick="btnUpdateInfo_DoubleClick"></Button>
+                <Button Background="LightGray" Grid.Column="2" Grid.Row="5" IsEnabled="False"></Button>
+                <Button Background="LightGray" Grid.Column="3" Grid.Row="5" IsEnabled="False"></Button>
+                <Button Background="LightGray" Grid.Column="4" Grid.Row="5" IsEnabled="False"></Button>
+                <Button Background="LightGray" Grid.Column="5" Grid.Row="5" IsEnabled="False"></Button>
+                <Button Background="LightGray" Grid.Column="6" Grid.Row="5" Content="Overdue tasks" x:Name="btnShowODTask" Click="btnShowODTask_Click"></Button>
+
+
+            </Grid>
+
+            <Grid Margin="20,20,952,820" Background="SkyBlue" Width="300">
+
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="230" />
+
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions >
+                    <RowDefinition Height="60"/>
+                </Grid.RowDefinitions>
+                <Border Grid.Column="0" Grid.Row="0"  BorderBrush="{StaticResource brush}" BorderThickness= "3 3 6 3" CornerRadius="0 0 0 0"></Border>
+                <TextBlock x:Name="txbDayTaskDate" FontSize="25" FontWeight="Bold" TextAlignment="Center" Margin="0,10,0,-274">Task</TextBlock>
+            </Grid>
+
+            <!-- Buttons-->
+            <Grid Margin="300,685,200,60">
+
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="695" />
+
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions >
+                    <RowDefinition Height="120"/>
+                </Grid.RowDefinitions>
+
+                <Border Grid.Column="0" Grid.Row="0"  BorderBrush="{StaticResource brush}" BorderThickness= "3 3 3 3" CornerRadius="16 16 16 16"></Border>
+                <Grid>
+
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="2*" />
+                        <ColumnDefinition Width="2*" />
+                        <ColumnDefinition Width="*" />
+
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions >
+                        <RowDefinition Height="60"/>
+                        <RowDefinition Height="60"/>
+
+                    </Grid.RowDefinitions>
+
+
+                    <Button  
+                    HorizontalAlignment="Stretch" 
+                    Grid.RowSpan="2"
+                    Grid.Column="0" 
+                    x:Name="btnPreviousMonth"
+                    Click="btnPreviousMonth_Click" FontSize="50">
+                        <Button.Content>
+                            <Image Source="/Images/lefttwo.png"/>
+                        </Button.Content>
+
+                        <Button.Resources>
+                            <Style TargetType="{x:Type Border}">
+                                <Setter Property="CornerRadius" Value="16 0 0 16"/>
+                            </Style>
+                        </Button.Resources>
+                    </Button>
+
+                    <Button Grid.Column="1" 
+                            Grid.Row="0" 
+                            FontSize="30" 
+                            x:Name="btnLoadCalendar" 
+                            Click="btnLoadCalendar_Click">Load</Button>
+
+                    <Button 
+                        Grid.Column="2" 
+                        Grid.Row="0" 
+                        FontSize="30" 
+                        x:Name="btnSaveCalendar" 
+                        Click="btnSaveCalendar_Click">Save</Button>
+                    <Button Grid.Column="1" Grid.Row="1" 
+                        FontSize="30" Grid.ColumnSpan="2" Height="60"
+                        Margin="231,0,0,0" 
+                        VerticalAlignment="Top"
+                        Click="btninfo_Click"    
+                        >Instruction</Button>
+
+                    <Button  
+                    HorizontalAlignment="Stretch" 
+                    Grid.Row="1" 
+                    Grid.Column="1" 
+                    Click="btnGenrateReport_Click"
+                    FontSize="30">
+                        <Button.Resources>
+                            <Style TargetType="{x:Type Border}">
+
+
+                            </Style>
+                        </Button.Resources>
+                        Report
+                    </Button>
+
+
+
+                    <Button  
+                    HorizontalAlignment="Stretch" 
+                        Grid.RowSpan="2"
+                    Grid.Row="0" 
+                    Grid.Column="4"
+                    x:Name="btnNextMonth"
+                    Click="btnNextMonth_Click">
+                        <Button.Content>
+                            <Image Source="/Images/right.png"/>
+                        </Button.Content>
+                        <Button.Resources>
+                            <Style TargetType="{x:Type Border}">
+                                <Setter Property="CornerRadius" Value=" 0 16 16 0"/>
+                            </Style>
+                        </Button.Resources>
+                    </Button>
+
+                </Grid>
+
+            </Grid>
+
+
+
+
+
+        </Grid>
+
+    </Grid>
+
+
+</Window>
