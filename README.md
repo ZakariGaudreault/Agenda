@@ -1,8 +1,6 @@
 # WPF Calendar Application
 
-A comprehensive software application designed to deliver an intuitive graphical user interface for efficient viewing and management of events and appointments. This project was a collaborative effort undertaken by my colleague and me during our Program III class, where we delved into advanced concepts of software development using C# and XAML. This experience provided a valuable opportunity to apply theoretical knowledge to real-world scenarios, emphasizing effective communication and seamless integration of back-end and front-end components.
-
-Our application not only excels in providing a user-friendly interface but also boasts robust functionality, catering to diverse scheduling needs. The integration of C# and XAML allowed us to create a seamless and responsive experience for users. The development process sharpened our skills, deepening our understanding of the intricacies involved in creating cohesive software.
+A comprehensive software application designed to deliver an intuitive graphical user interface for efficient viewing and management of events and appointments. This project was a collaborative effort undertaken by my colleague and me during our Programming III class, where we tried advanced concepts of software development using C# and XAML. This experience provided a valuable opportunity to apply theoretical knowledge to real-world scenarios, emphasizing effective communication and seamless integration of back-end and front-end components.
 
 ## Notable Features
 
